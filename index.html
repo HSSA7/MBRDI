@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MBRDI Design Advisor</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://x3dom.org/release/x3dom.css"
+    />
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="https://x3dom.org/release/x3dom.js"></script>
+  </head>
+  <style>
+    .navbar
+    {
+      background: color grey 800;
+      position: absolute;
+      width: 100vw;
+      margin: 0px;
+     
+      
+
+    }
+    .navbar ul{
+      overflow: auto;
+    }
+    .navbar li
+    {
+      float:left;
+      list-style: none;
+    }
+
+    .header-content
+    {
+      color:#ffff;
+      text-align: center;
+      font-weight: bolder;
+      font-family: arial;
+    }
+  </style>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><img src="../static/new bg.png" alt="" srcset="" width=50px></li>
+          <p class="header-content">AI Powered Automated BiW Concept Design</p>
+        </ul>
+        
+      </nav>
+    </header>
+    <x3d id="beam_x3d_tag" style="width: 100%; border: none">
+      <Scene>
+        <Viewpoint
+          position="44.74207 86.60527 1341.59123"
+          orientation="0.00000 1.00000 0.00000 0.03975"
+          centerOfRotation="0.00000 0.00000 0.00000"
+          description="cross_section_view"
+        ></Viewpoint>
+        <Transform scale="1 1 1">
+          <Shape id="beam_x3d_shape">
+            <Appearance>
+              <Material
+                id="beam_mat_color"
+                diffuseColor="0.65 0.65 0.7"
+                shininess="0.9"
+                specularColor="0.2 0.2 0.2"
+                transparency="0"
+              >
+              </Material>
+            </Appearance>
+            <TriangleSet id="beam_x3d_tset" solid="false"></TriangleSet>
+          </Shape>
+        </Transform>
+      </Scene>
+    </x3d>
+
+    <!-- Container of all the sliders -->
+    <div class="container">
+      <div id="user_guide" style="opacity: 0.5">
+        <a href="userguide.html" target="_blank" style="color: white">Need Help?</a>
+      </div>
+      <div class="Length flexbox">
+        <div class="title">
+          <h4><span class="logo">&#9654;</span>Length</h4>
+        </div>
+        <div id="input_parameter">
+          <label for="L1" class="form-label element">L1</label>
+          <input
+            type="range"
+            class="form-range element"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="5.3"
+            id="L1"
+          />
+          <input
+            type="number"
+            name="age"
+            id="L1"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label element"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="L2" class="form-label" class="element">L2</label>
+          <input
+            type="range"
+            class="form-range element"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="13.3"
+            id="L2"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label element"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="L3" class="form-label">L3</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="19.9"
+            id="L3"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="L4" class="form-label">L4</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="14.3"
+            id="L4"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="L5" class="form-label">L5</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="10.1"
+            id="L5"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="L6" class="form-label">L6</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="34.0"
+            id="L6"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="L7" class="form-label">L7</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="32.0"
+            id="L7"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="L8" class="form-label">L8</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="0.33"
+            id="L8"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="L9" class="form-label">L9</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="-0.83"
+            id="L9"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+      </div>
+      <div class="Angle flexbox">
+        <div class="title">
+          <h4><span class="logo">&#9654;</span>Angle</h4>
+        </div>
+        <div id="input_parameter">
+          <label for="A1" class="form-label">A1</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="96.28"
+            value="5.3"
+            id="A1"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+
+        <div id="input_parameter">
+          <label for="A2" class="form-label">A2</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="96.53"
+            value="5.3"
+            id="A2"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+
+        <div id="input_parameter">
+          <label for="A3" class="form-label">A3</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="102.21"
+            id="A3"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+
+        <div id="input_parameter">
+          <label for="A4" class="form-label">A4</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="104.87"
+            id="A4"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+
+        <div id="input_parameter">
+          <label for="A5" class="form-label">A5</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="97.44"
+            id="A5"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+
+        <div id="input_parameter">
+          <label for="A6" class="form-label">A6</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="96.04"
+            id="A6"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+
+        <div id="input_parameter">
+          <label for="A7" class="form-label">A7</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="96.1"
+            id="A7"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+
+        <div id="input_parameter">
+          <label for="A8" class="form-label">A8</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="93.26"
+            id="A8"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+      </div>
+
+      <div class="Radius flexbox">
+        <div class="title">
+          <h4><span class="logo">&#9654;</span>Radius</h4>
+        </div>
+        <div id="input_parameter">
+          <label for="R1" class="form-label">R1</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="7.0"
+            id="R1"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="A1" class="form-label">R2</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="7.2"
+            id="R2"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="R3" class="form-label">R3</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="7.8"
+            id="R3"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="R4" class="form-label">R4</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="7.8"
+            id="R4"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="R5" class="form-label">R5</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="6.6"
+            id="R5"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="R6" class="form-label">R6</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="7.8"
+            id="R6"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="R7" class="form-label">R7</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="6.2"
+            id="R7"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+        <div id="input_parameter">
+          <label for="R8" class="form-label">R8</label>
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="7.4"
+            id="R8"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+      </div>
+      <div class="Thickness flexbox">
+        <h4>Thickness</h4>
+        <div id="input_parameter">
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            min="1"
+            max="100"
+            value="1.8"
+            id="t0"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+      </div>
+      <div class="ExtrudeLength flexbox">
+        <h4>Extrude Length</h4>
+        <div id="input_parameter">
+          <input
+            type="range"
+            class="form-range"
+            min="-1000"
+            max="1000"
+            step="0.01"
+            value="930.0"
+            id="L0"
+          />
+          <input
+            type="number"
+            name="age"
+            id="age"
+            min="-1000"
+            max="1000"
+            step="1"
+            value="18"
+            class="form-label"
+          />
+        </div>
+      </div>
+      <!-- Dropdown for the selection of Material-->
+    <div class="Material flexbox">
+      <label class="dropdown" for="ddmaterial"><h4>Beam Material</h4></label>
+      <select name="materials" id="ddmaterial">
+        <option value="Usibor 2000">Usibor 2000</option>
+        <option value="Usibor 1500">Usibor 1500</option>
+        <option value="CP 900">CP 900</option>
+        <option value="DP 1000">DP 1000</option>
+      </select> 
+    </div>
+    <!-- <label class="dropdown"> -->
+      <!-- <div class="dd-button" style="opacity: 0.5">Material</div> -->
+<!--  -->
+      <!-- <input type="checkbox" class="dd-input" id="test" /> -->
+<!--  -->
+      <!-- <ul class="dd-menu"> -->
+        <!-- <li>Usibor 2000</li> -->
+        <!-- <li>Usibor 1500</li> -->
+        <!-- <li>CP 900</li> -->
+        <!-- <li>DP 1000</li> -->
+        <!-- <li class="divider"></li> -->
+      <!-- </ul> -->
+    <!-- </label> -->
+    
+    
+      <div class="buttondiv">
+      <button id="export" class="dd-button flexbox">EXPORT</button>
+      <button id="back" class="dd-button flexbox">BACK</button>
+      </div>
+
+   
+    
+
+
+     
+
+      
+
+   
+  </div>
+</div>
+</div>
+
+<img src="../static/Length_img.png" alt="" srcset="" class="length-img">
+
+   <!-- Information about the commands -->
+ 
+    <div id="beamview">
+      <b>BeamView Keyboard Shortcuts</b>
+      <div id="commands">
+     
+        <b>r</b> reset view<br/>
+        <b>a</b> show all<br/>
+        <b>u</b> upright<br/>
+      </div>
+    </div>
+    
+    
+
+    <div class="final_values">
+      
+     
+      <table>
+        <tr>
+         <td colspan="2" style="font-size: 2rem">Resultants</td>
+        
+        </tr>
+        <tr>
+         <td style="font-size: 1.3rem">Maximum Load</td>
+         <td id="load" style="font-size: 1 rem">50 N</td>
+         
+        </tr>
+        <tr>
+         <td style="font-size: 1.3rem">Maximum Deflection</td>
+         <td id="deflection" style="font-size: 1 rem">5 mm</td>
+         
+        </tr>
+       </table>
+      
+      </div>
+      
+    </div>
+  </div>
+
+    
+   
+
+    
+
+
+
+
+    <script>
+      // get all the sliders and spinners
+      const rangers = document.querySelectorAll('input[type="range"]');
+      const spinners = document.querySelectorAll('input[type="number"]');
+      let data = {
+        "L1": 5.3,
+        "L2": 13.3,
+        "L3": 19.9,
+        "L4": 14.3,
+        "L5": 10.1,
+        "L6": 34.0,
+        "L7": 32.0,
+        "L8": 0.33,
+        "L9": -0.83,
+        "A1": 96.28,
+        "A2": 96.53,
+        "A3": 102.21,
+        "A4": 104.87,
+        "A5": 97.44,
+        "A6": 96.04,
+        "A7": 96.1,
+        "A8": 93.26,
+        "R1": 7.0,
+        "R2": 7.2,
+        "R3": 7.8,
+        "R4": 7.8,
+        "R5": 6.6,
+        "R6": 7.8,
+        "R7": 6.2,
+        "R8": 7.4,
+        "t0": 1.8,
+        "L0": 930.0
+      };
+
+      // Set initial values of the sliders
+      let vals = Object.values(data);
+      //console.log(vals);
+      Object.keys(data).forEach((value, index) => {
+        //console.log(value, index);
+        let ele = document.getElementById(value);
+        ele.value = vals[index];
+      });
+
+      let s = rangers[0].id;
+      fetch("/update_beam_x3d", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          [s]: rangers[0].value,
+          'material': document.getElementById('ddmaterial').value
+        }),
+      })
+        .then((response) => {
+          //console.log(response);
+          return response.text();
+        })
+        .then((value) => {
+          parser = new DOMParser();
+          xmlDoc = parser.parseFromString(value, "text/xml");
+          tset_tag = xmlDoc.getElementsByTagName("TriangleSet")[0];
+          load_tag = xmlDoc.getElementsByTagName("Load")[0];
+          defl_tag = xmlDoc.getElementsByTagName("Deflection")[0];
+          //console.log(tset_tag);
+          document.getElementById("beam_x3d_tset").innerHTML =
+            tset_tag.innerHTML;
+          document.getElementById("load").innerHTML =
+            load_tag.innerHTML;
+          document.getElementById("deflection").innerHTML =
+            defl_tag.innerHTML;
+        });
+
+      const len = rangers.length;
+
+
+
+      // Making the range based on the initial value of the slider
+      for (let i = 0; i < len; ++i) {
+        const val = parseFloat(rangers[i].value);
+        spinners[i].value = val;
+        //console.log(rangers[i].value, val);
+        let change = 0;
+        let step = 0;
+        if (i < 9) {
+          change = val * 0.1;
+        } else if (i < 17) {
+          change = val * 0.05;
+        } else if (i < 26) {
+          change = val * 0.03;
+        } else {
+          change = val * 0.1;
+        }
+        change = Math.abs(change);
+        step = change * 0.1;
+        rangers[i].step = step;
+        spinners[i].step = step;
+        rangers[i].min = val - change;
+        spinners[i].min = rangers[i].min;
+        rangers[i].max = val + change;
+        spinners[i].max = rangers[i].max;
+      }
+
+      // Adding functionality to sliders
+      for (let i = 0; i < len; ++i) {
+        rangers[i].oninput = () => {
+          let s = rangers[i].id;
+          data[s] = rangers[i].value;
+          //console.log({ [s]: rangers[i].value });
+          fetch("/update_beam_x3d", {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify({
+              [s]: rangers[i].value,
+              'material': document.getElementById('ddmaterial').value
+            }),
+          })
+            .then((response) => {
+              return response.text();
+            })
+            .then((value) => {
+              parser = new DOMParser();
+              xmlDoc = parser.parseFromString(value, "text/xml");
+              tset_tag = xmlDoc.getElementsByTagName("TriangleSet")[0];
+              load_tag = xmlDoc.getElementsByTagName("Resultants")[0];
+              load_tag = load_tag.getElementsByTagName("Load")[0];
+              defl_tag = xmlDoc.getElementsByTagName("Resultants")[0];
+              defl_tag = defl_tag.getElementsByTagName("Deflection")[0];
+              document.getElementById("beam_x3d_tset").innerHTML =
+                tset_tag.innerHTML;
+              document.getElementById("load").innerHTML =
+                load_tag.innerHTML;
+              document.getElementById("deflection").innerHTML =
+                defl_tag.innerHTML;
+            });
+        };
+      }
+      // Add functionality to the materials dropdown
+      material_dropdown = document.getElementById('ddmaterial');
+      material_dropdown.onchange = () => {
+      post_data = {}
+      for (let i = 0; i < len; ++i) {
+          let s = rangers[i].id;
+          post_data[s] = rangers[i].value;
+      }
+      post_data['material'] = material_dropdown.value
+          fetch("/update_beam_material", {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify(post_data),
+          })
+            .then((response) => {
+              //console.log(response);
+              return response.text();
+            })
+            .then((value) => {
+              parser = new DOMParser();
+              xmlDoc = parser.parseFromString(value, "text/xml");
+              load_tag = xmlDoc.getElementsByTagName("Resultants")[0];
+              load_tag = load_tag.getElementsByTagName("Load")[0];
+              defl_tag = xmlDoc.getElementsByTagName("Resultants")[0];
+              defl_tag = defl_tag.getElementsByTagName("Deflection")[0];
+              document.getElementById("load").innerHTML =
+                load_tag.innerHTML;
+              document.getElementById("deflection").innerHTML =
+                defl_tag.innerHTML;
+            });
+        };
+    </script>
+    <!-- Script for rotating the body -->
+    <script>
+      var selected_target_color = null;
+      var current_selected_shape = null;
+      var current_mat = null;
+      function fitCamera() {
+        var x3dElem = document.getElementById("pythonocc-x3d-scene");
+        x3dElem.runtime.fitAll();
+      }
+      function onDocumentKeyPress(event) {
+        event.preventDefault();
+        if (event.key == "t") {
+          // t key
+          if (current_selected_shape) {
+            if (current_selected_shape.render == "true") {
+              current_selected_shape.render = "false";
+            } else {
+              current_selected_shape.render = "true";
+            }
+          }
+        }
+      }
+      // add events
+      document.addEventListener("keypress", onDocumentKeyPress, false);
+
+      // expansion of length, angle, radius
+      document.querySelectorAll(".title").forEach((i) =>
+        i.addEventListener("click", (event) => {
+          // console.log('.' + event.target.parentElement.innerText.slice(1))
+          // console.log('.' + event.target.innerText.slice(1) == '.Length')
+          box = document.querySelector(
+            "." + event.target.parentElement.innerText.slice(1)
+          );
+          height = window.getComputedStyle(box);
+          //console.log(box.style.height);
+          if (box.style.height != "fit-content")
+            box.style.height = "fit-content";
+          else box.style.height = "1.5em";
+        })
+      );
+
+      // add event listeners to each slider
+      rangers.forEach((slider) => {
+        slider.addEventListener("input", () => {
+          // get the value of the slider and update the corresponding spinner
+          const value = slider.value;
+          const spinner = event.target.nextElementSibling;
+          spinner.value = value;
+        });
+      });
+
+      // add event listeners to each spinner
+      spinners.forEach((spinner) => {
+        spinner.addEventListener("input", () => {
+          // get the value of the spinner and update the corresponding slider
+          const value = spinner.value;
+          const slider = event.target.previousElementSibling;
+          slider.value = value;
+        });
+      });
+
+
+    document.querySelector("#export").addEventListener("click", () => {
+      fetch("/export_beam_brep", {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify(data),
+          });
+    })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Manual: Everything You Need to Know - Mercedez Benz Beam Rendering Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/userguide.css">
+
+    
+</head>
+
+<style>
+    .navbar
+    {
+      background: color grey 800;
+      position:sticky;
+     
+      
+
+    }
+    .navbar ul{
+      overflow: auto;
+    }
+    .navbar li
+    {
+      float:left;
+      list-style: none;
+    }
+
+    .header-content
+    {
+      color:#ffff;
+      text-align: center;
+      font-weight: bolder;
+      font-family: arial;
+    }
+  </style>
+<body>
+    <header>
+        <nav class="navbar">
+          <ul>
+            <li><img src="../static/new bg.png" alt="" srcset="" width=50px></li>
+            <p class="header-content">AI Powered Automated BiW Concept Design</p>
+          </ul>
+          
+        </nav>
+      </header>
+    <div class="title">
+        User's Guide: Everything you need to know
+    </div>
+
+<div class="flex-container">
+    <div class="Intro flex-item">
+
+   <p style=" font-size: 1.5rem;font-weight: 400;">Introduction</p> 
+    <p>Welcome to Mercedez Benz Beam Rendering Screen, a very helpful tool for mechanical design engineers! This screen displays the beam that was selected by the user as input in previous screens. Alongside displaying the beam, this screen gives control of 28 parameters of the beam to the user. Based on the selected parameters, the screen displays the deflection of the beam and the load experienced by the beam. This screen has its application in the crash testing domain where the deflection of the beam will be examined based on these parameters and will help designers to select a suitable beam for manufacturing.</p>
+
+ </div>
+
+<div class="Nav_Features flex-item">
+    <p style=" font-size: 1.5rem;font-weight: 400;">Navigation and Features</p>
+    <p>Beam Rendering Screen is divided into several option buttons and display features:</p>
+    <ul>
+        <li><strong>Length Button:</strong> It's a dropdown button comprised of 9 range sliders which belong to 9 length parameters of a double hat beam. Lengths are all linear dimensions present in the beam. The figure given below is a labelled diagram of the beam with all 9 lengths (L1, L2, L3, L4, L5, L6, L7, L8, L9). Slider's position is taken as input stored in JSON file and real-time changes in length are made in the beam.</li>
+       
+        <img src="../static/Length.png" alt="" srcset="" class="image">
+
+        <li><strong>Angle Button:</strong> It's a dropdown button comprised of 8 range sliders which belong to 8 angle parameters of a double hat beam. Angles are formed at 8 curved vertices present in the beam. The figure given below is a labelled diagram of the beam with all 8 angles (A1, A2, A3, A4, A5, A6, A7, A8). Slider's position is taken as input stored in JSON file and real-time changes in angle are made in the beam.</li>
+        <img src="../static/Angle.png" alt="" srcset="" class="image">
+        <li><strong>Radius Button:</strong> It's a dropdown button comprised of 8 range sliders which belong to 8 radius parameters of a double hat beam. These are all fillet radii present at 8 curved vertices in the beam. The figure given below is a labelled diagram of the beam with all 8 radii (R1, R2, R3, R4, R5, R6, R7, R8). Slider's position is taken as input stored in JSON file and real-time changes in radius are made in the beam.</li>
+        <img src="../static/Radius.png" alt="" srcset="" class="image">
+        <li><strong>Extrude Length Slider:</strong> Extrude length of a beam refers to the distance over which a two-dimensional cross-section of a beam is extended in a linear direction to create a three-dimensional solid or object. This slider allows the user to update this linear dimension of the beam. Slider's position is taken as input stored in JSON file and real-time changes in extrude length are made in the beam.</li>
+        <li><strong>Thickness Slider:</strong> The thickness of a beam refers to the dimension of the beam perpendicular to its extrude length/extended linear dimension. It is typically measured as the shortest distance between the top and bottom surfaces of the beam. With the help of the slider, the user can update the thickness of the beam and changes will be reflected in the beam.</li>
+        <li><strong>Material Dropdown:</strong> Material of a beam refers to the type of substance used in its construction. Material defines beam’s strength , stiffness , durability and other mechanical properties.Choice of material is very crucial in designing beam for structural applications. This dropdown menu allows user to change material of beam being rendered. 
+        </li>
+        <li><strong>EXPORT Button</strong> This button allows user to create a file containing data or content within the software and save it in a format that can be used in a software. The exported file can then be shared, transferred, or used in other applications or systems, enabling users to extract and utilize data or content from the software in a different context. 
+        </li>
+        <li><strong>BACK Button</strong> This button navigates user to the previous working screen. When activated , the back button reverses the most recent navigation action.
+        </li>
+        <li><strong>Beam View Keyboard Shortcuts</strong> 
+            <li><strong>R Key:</strong> R stands for reset view ,pressing R key will position beam in centre of screen with cross section facing the user which can understood as origin. This view is also the default view of beam. </li>
+            <li><strong>A Key:</strong>A stands for Augment View , pressing A key will display an enlarged view of cross section of beam.</li>
+            <li><strong>U Key: </strong>U stands for Upright View, pressing U key will change the position of the beam as per the vertical inclination which user will give with help of mouse pointer.Any displacement of beam in X direction will have no effect of this keyboard command.</li>
+        </li>
+        <li><strong>Deflection Label</strong> This label displays maximum deflection of beam in a component level crash analysis.Deflection is measured in milimeters.
+        </li>
+        <li><strong>Load Label</strong> This label displays maximum load this beam can handle without failure. Load is measured in Newtons. 
+        </li>
+
+
+
+
+    </div>
+
+</div>
+</body>

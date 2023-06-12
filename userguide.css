@@ -1,0 +1,83 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#ced7de, #808080);
+    
+    background-image: url("./new\ bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 140%;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.8;
+    
+}
+
+.title
+{
+    font-size: 4rem;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+
+.Intro
+{
+    position: relative;;
+    margin: 3rem 4rem 4rem 4rem;
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    color: white;
+
+    font-weight: 100;
+    overflow: hidden;
+    background-color: #1d1d1d;
+    opacity: 0.8;
+
+}
+
+.Nav_Features
+{
+
+    position: relative;;
+    margin: 0rem 4rem 4rem 4rem;
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    color: white;
+
+    font-weight: 100;
+    overflow: hidden;
+    background-color: #1d1d1d;
+    line-height: 1.8rem;
+    opacity: 0.8;
+    
+}
+.image
+{
+    width: 200px;
+    height: 400px;
+    opacity: 1;
+  
+}
+
+.flex-container
+{
+    display: flex;
+    /* Set flexbox properties */
+    flex-direction:column;
+    
+    align-items: center;
+}
+
+.flex-item 
+{
+    /* Add styles to child divs */
+    /* Example styles */
+  
+    padding: 0.2rem;
+    border: 1px solid black;
+  }
